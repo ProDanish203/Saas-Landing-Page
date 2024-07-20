@@ -1,8 +1,9 @@
+import { Header } from "@/components/sections";
 
 export default function Home() {
   return (
     <main>
-      <div></div>
+      <Header />
     </main>
   );
 }
