@@ -5,7 +5,7 @@ import React from "react";
 
 export const Header = () => {
   return (
-    <header className="sticky top-0">
+    <header className="sticky top-0 backdrop-blur-sm z-20">
       <div className="center py-3 bg-black text-white text-sm gap-x-3">
         <p className="max-md:hidden text-white/60 ">
           Streamline your workflow with our tools
@@ -16,7 +16,7 @@ export const Header = () => {
         </div>
       </div>
 
-      <div className="py-5 md:px-10">
+      <div className="py-2 md:px-10">
         <div className="">
           <div className="flex items-center justify-between">
             <Image
@@ -34,7 +34,7 @@ export const Header = () => {
               <Link href="">Customers</Link>
               <Link href="">Updates</Link>
               <Link href="">Help</Link>
-              <button className="bg-black text-white px-4 py-2 rounded-lg font-medium inline-flex items-center justify-center tracking-tight">
+              <button className="btn btn-primary">
                 Get for free
               </button>
             </nav>
