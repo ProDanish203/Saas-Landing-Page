@@ -1,9 +1,21 @@
+"use client";
 import { ArrowRight } from "lucide-react";
-import Image from "next/image";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 export const CallToAction = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+
+  const transalteY = useTransform(scrollYProgress, [0, 1], [150, -150]);
   return (
-    <section className="md:px-10 px-3 bg-gradient-to-b from-[#FFFF] to-[#D2DCFF] py-32  overflow-x-clip overflow-y-clip">
+    <section
+      ref={ref}
+      className="md:px-10 px-3 bg-gradient-to-b from-[#FFFF] to-[#D2DCFF] py-32  overflow-x-clip overflow-y-clip"
+    >
       <div className="container mx-auto">
         <div className="max-w-[540px] mx-auto">
           <h2 className="section-title mt-5">Sign up for free today</h2>
@@ -21,19 +33,27 @@ export const CallToAction = () => {
           </div>
 
           <div className="relative w-full">
-            <Image
+            <motion.img
               src="/images/star.png"
               alt="star img"
               width={260}
               height={260}
               className="max-md:hidden absolute -top-[340px] -left-64 lg:-left-[350px] lg:w-[300px] lg:-top-[300px]"
+              loading="lazy"
+              style={{
+                translateY: transalteY,
+              }}
             />
-            <Image
+            <motion.img
               src="/images/spring.png"
               alt="spring img"
               width={260}
               height={260}
               className="max-md:hidden w-[250px] absolute -top-[200px] -right-[200px] lg:w-[300px] lg:-right-[350px]"
+              loading="lazy"
+              style={{
+                translateY: transalteY,
+              }}
             />
           </div>
         </div>

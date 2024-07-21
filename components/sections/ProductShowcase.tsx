@@ -1,9 +1,22 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 export const ProductShowcase = () => {
+  const productRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: productRef,
+    offset: ["start end", "end start"],
+  });
+
+  const transalteY = useTransform(scrollYProgress, [0, 1], [150, -150]);
+
   return (
-    <section className="md:px-10 px-3 bg-gradient-to-b from-[#FFFF] to-[#D2DCFF] py-24 overflow-x-clip">
+    <section
+      ref={productRef}
+      className="md:px-10 px-3 bg-gradient-to-b from-[#FFFF] to-[#D2DCFF] py-24 overflow-x-clip"
+    >
       <div className="container mx-auto">
         <div className="max-w-[540px] mx-auto">
           <div className="center">
@@ -27,19 +40,27 @@ export const ProductShowcase = () => {
             height={3000}
             className="max-lg:mt-10 "
           />
-          <Image
+          <motion.img
             src="/images/pyramid.png"
             alt="product"
             width={1000}
             height={1000}
+            loading="lazy"
             className="max-md:hidden absolute w-[170px] lg:w-[250px] -right-16 -top-20"
+            style={{
+              translateY: transalteY,
+            }}
           />
-          <Image
+          <motion.img
             src="/images/torus.png"
             alt="product"
             width={1000}
             height={1000}
+            loading="lazy"
             className="max-md:hidden w-[170px] lg:w-[250px] absolute bottom-24 -left-16 lg:bottom-36"
+            style={{
+              translateY: transalteY,
+            }}
           />
         </div>
       </div>

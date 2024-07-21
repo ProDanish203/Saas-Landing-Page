@@ -1,6 +1,8 @@
+"use client";
 import { pricingTiers } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import { Check } from "lucide-react";
+import { motion } from "framer-motion";
 
 export const Pricing = () => {
   return (
@@ -37,9 +39,18 @@ export const Pricing = () => {
                   </h3>
                   {popular && (
                     <div className="inline-flex text-sm px-4 py-1.5 rounded-xl border border-white/20">
-                      <span className="bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#71C2EF,#3BFFFF,#DD7DDF)] text-transparent bg-clip-text font-medium">
+                      <motion.span
+                        animate={{ backgroundPosition: "-100%" }}
+                        transition={{
+                          repeat: Infinity,
+                          duration: 2,
+                          repeatType: "loop",
+                          ease: "linear",
+                        }}
+                        className="bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#71C2EF,#3BFFFF,#DD7DDF,#E1CD86,#71C2EF,#3BFFFF)] [background-size:200%] text-transparent bg-clip-text font-medium"
+                      >
                         Most Popular
-                      </span>
+                      </motion.span>
                     </div>
                   )}
                 </div>
