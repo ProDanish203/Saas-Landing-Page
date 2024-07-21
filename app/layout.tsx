@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { SmoothScrollProvider } from "@/providers/SmoothScrollProvider";
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
@@ -27,8 +28,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(dmSans.className, "antialiased bg-[#EAEEFE] h-screen overflow-x-hidden")}>
-        {children}
+      <body
+        className={cn(
+          dmSans.className,
+          "antialiased bg-[#EAEEFE] h-screen overflow-x-hidden"
+        )}
+      >
+        <SmoothScrollProvider>{children}</SmoothScrollProvider>
       </body>
     </html>
   );
