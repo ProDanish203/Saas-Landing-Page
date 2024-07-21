@@ -2,6 +2,7 @@ import {
   Header,
   Hero,
   LogoTicker,
+  Pricing,
   ProductShowcase,
 } from "@/components/sections";
 
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <LogoTicker />
       <ProductShowcase />
+      <Pricing />
     </main>
   );
 }
