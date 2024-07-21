@@ -50,3 +50,66 @@ export const pricingTiers = [
     ],
   },
 ];
+
+export const testimonialsData = [
+  {
+    text: "This product is a game changer! Highly recommended for everyone.",
+    img: "/images/testimonials/user1.png",
+    name: "Ahmed",
+    username: "@ahmed",
+  },
+  {
+    text: "Best purchase I've made this year! Works like a charm.",
+    img: "/images/testimonials/user2.png",
+    name: "Sara",
+    username: "@sara",
+  },
+  {
+    text: "Incredible value for money. I'm really impressed with the features.",
+    img: "/images/testimonials/user1.png",
+    name: "Usman",
+    username: "@usman",
+  },
+  {
+    text: "A must-have for anyone looking for quality and affordability.",
+    img: "/images/testimonials/user2.png",
+    name: "Ayesha",
+    username: "@ayesha",
+  },
+  {
+    text: "Amazing customer service and a fantastic product!",
+    img: "/images/testimonials/user1.png",
+    name: "Hassan",
+    username: "@hassan",
+  },
+  {
+    text: "This product exceeded my expectations. Five stars!",
+    img: "/images/testimonials/user2.png",
+    name: "Nida",
+    username: "@nida",
+  },
+  {
+    text: "Absolutely love it! It has made my life so much easier.",
+    img: "/images/testimonials/user1.png",
+    name: "Bilal",
+    username: "@bilal",
+  },
+  {
+    text: "Highly efficient and user-friendly. Worth every penny!",
+    img: "/images/testimonials/user2.png",
+    name: "Fatima",
+    username: "@fatima",
+  },
+  {
+    text: "I'm delighted with the performance of this product. Superb!",
+    img: "/images/testimonials/user1.png",
+    name: "Zain",
+    username: "@zain",
+  },
+  {
+    text: "Exceptional quality and very easy to use. Love it!",
+    img: "/images/testimonials/user2.png",
+    name: "Rabia",
+    username: "@rabia",
+  },
+];

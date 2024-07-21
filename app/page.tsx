@@ -4,6 +4,7 @@ import {
   LogoTicker,
   Pricing,
   ProductShowcase,
+  Testimonials,
 } from "@/components/sections";
 
 export default function Home() {
@@ -14,6 +15,8 @@ export default function Home() {
       <LogoTicker />
       <ProductShowcase />
       <Pricing />
+      <Testimonials />
+      
     </main>
   );
 }

@@ -22,8 +22,8 @@ export const Pricing = () => {
               <div
                 key={index}
                 className={cn(
-                  "p-10 rounded-3xl shadow-[0_7px_14px_#EAEAEA] border border-[#F1F1F1] max-w-sm w-full",
-                  inverse && "bordeer-black bg-black text-white"
+                  "card",
+                  inverse && "border-black bg-black text-white"
                 )}
               >
                 <div className="flex justify-between items-center">
