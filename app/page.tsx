@@ -1,5 +1,6 @@
 import {
   CallToAction,
+  Footer,
   Header,
   Hero,
   LogoTicker,
@@ -18,6 +19,7 @@ export default function Home() {
       <Pricing />
       <Testimonials />
       <CallToAction />
+      <Footer />
     </main>
   );
 }

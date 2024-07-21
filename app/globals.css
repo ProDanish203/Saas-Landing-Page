@@ -46,4 +46,15 @@
   .card {
     @apply p-10 rounded-3xl shadow-[0_7px_14px_#EAEAEA] border border-[#F1F1F1] max-w-sm w-full;
   }
+
+  .social-icon {
+    @apply text-neutral-400 cursor-pointer size-6 hover:text-white duration-100 transition-colors;
+  }
+
+  .footer-list {
+    @apply flex flex-col gap-y-4 mt-3;
+  }
+  .footer-list-item {
+    @apply text-white/60;
+  }
 }
