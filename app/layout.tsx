@@ -4,8 +4,9 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { SmoothScrollProvider } from "@/providers/SmoothScrollProvider";
 import { IntroLoader } from "@/components/shared";
-import { CustomCursor } from "@/components/helpers";
+import { CircularButton, CustomCursor } from "@/components/helpers";
 import AnimatedCursor from "react-animated-cursor";
+import NextTopLoader from "nextjs-toploader";
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
@@ -38,8 +39,9 @@ export default function RootLayout({
         )}
       >
         <SmoothScrollProvider>
-          {/* <IntroLoader /> */}
+          <IntroLoader />
           {/* <CustomCursor /> */}
+          <CircularButton />
           {/* <AnimatedCursor
             innerSize={10}
             outerSize={12}
@@ -48,6 +50,23 @@ export default function RootLayout({
             outerScale={5}
             color="1, 13, 62"
           /> */}
+
+          {/* <NextTopLoader
+            color="#ff4800"
+            initialPosition={0.7}
+            crawlSpeed={200}
+            height={3}
+            crawl={true}
+            showSpinner={true}
+            easing="ease"
+            speed={200}
+            shadow="0 0 10px #2299DD,0 0 5px #2299DD"
+            template='<div class="bar" role="bar"><div class="peg"></div></div> 
+            <div class="spinner" role="spinner"><div class="spinner-icon"></div></div>'
+            zIndex={1600}
+            showAtBottom={false}
+          /> */}
+
           {children}
         </SmoothScrollProvider>
       </body>

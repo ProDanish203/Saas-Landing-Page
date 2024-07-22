@@ -27,9 +27,10 @@ export const CustomCursor = () => {
   return (
     <>
       <motion.div
-        className="size-10 rounded-full bg-red-500 fixed top-0 left-0"
+        className="size-10 z-20 rounded-full bg-red-500 fixed top-0 left-0"
         variants={variants}
         animate="default"
+        transition={{ ease: "linear", duration: 0.2 }}
       ></motion.div>
     </>
   );
