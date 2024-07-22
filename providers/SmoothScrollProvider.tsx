@@ -13,7 +13,7 @@ export const SmoothScrollProvider = ({
     const lenis = new Lenis({
       smoothWheel: true,
       syncTouch: true,
-      lerp: 0.02,
+      // lerp: 0.02,
     });
 
     lenis.start();

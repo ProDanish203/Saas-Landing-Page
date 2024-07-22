@@ -2,6 +2,7 @@ import { ArrowRight, Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { Button } from "../helpers";
 
 export const Header = () => {
   return (
@@ -34,9 +35,7 @@ export const Header = () => {
               <Link href="">Customers</Link>
               <Link href="">Updates</Link>
               <Link href="">Help</Link>
-              <button className="btn btn-primary">
-                Get for free
-              </button>
+              <Button text="Get for free" />
             </nav>
           </div>
         </div>

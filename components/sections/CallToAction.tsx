@@ -2,6 +2,7 @@
 import { ArrowRight } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { Button } from "../helpers";
 
 export const CallToAction = () => {
   const ref = useRef(null);
@@ -18,14 +19,28 @@ export const CallToAction = () => {
     >
       <div className="container mx-auto">
         <div className="max-w-[540px] mx-auto">
-          <h2 className="section-title mt-5">Sign up for free today</h2>
-          <p className="text-center text-lg tracking-tight text-text mt-5">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.5, type: "spring" }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="section-title mt-5"
+          >
+            Sign up for free today
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ delay: 0.3, duration: 0.5, type: "spring" }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center text-lg tracking-tight text-text mt-5"
+          >
             Celebrate the joy of accomplishment with an app designed to track
             your progress and motivate your efforts.
-          </p>
+          </motion.p>
 
           <div className="flex items-center justify-center gap-2 mt-10">
-            <button className="btn btn-primary">Get for free</button>
+            <Button text="Get for free" />
             <button className="btn btn-text flex gap-x-1 items-center hover:gap-x-2 transition-all duration-100">
               <span>Learn more</span>
               <ArrowRight className="size-4" />

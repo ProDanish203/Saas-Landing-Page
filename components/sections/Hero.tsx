@@ -8,6 +8,7 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import { useRef } from "react";
+import { Button } from "../helpers";
 
 export const Hero = () => {
   const heroRef = useRef(null);
@@ -39,7 +40,7 @@ export const Hero = () => {
             </p>
 
             <div className="flex items-center gap-x-1 mt-[30px]">
-              <button className="btn btn-primary">Get for free</button>
+              <Button text="Get for free" />
               <button className="btn btn-text flex gap-x-1 items-center hover:gap-x-2 transition-all duration-100">
                 <span>Learn more</span>
                 <ArrowRight className="size-4" />

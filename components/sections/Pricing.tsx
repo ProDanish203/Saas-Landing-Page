@@ -9,10 +9,24 @@ export const Pricing = () => {
     <section className="md:px-10 bg-white px-3 py-24 overflow-x-clip">
       <div className="container mx-auto">
         <div className="mx-auto">
-          <h2 className="section-title">Pricing</h2>
-          <p className="section-description mt-5">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.5, type: "spring" }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="section-title"
+          >
+            Pricing
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ delay: 0.3, duration: 0.5, type: "spring" }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="section-description mt-5"
+          >
             Choose a plan that fits your needs with flexible pricing options.
-          </p>
+          </motion.p>
         </div>
 
         <div className="mt-10 flex flex-col gap-6 items-center lg:flex-row lg:items-end lg:justify-center">
@@ -21,7 +35,15 @@ export const Pricing = () => {
               { btnText, features, inverse, popular, monthlyPrice, title },
               index
             ) => (
-              <div
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                transition={{
+                  delay: index * 0.4,
+                  duration: 0.5,
+                  type: "keyframes",
+                }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 key={index}
                 className={cn(
                   "card",
@@ -78,7 +100,7 @@ export const Pricing = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </motion.div>
             )
           )}
         </div>

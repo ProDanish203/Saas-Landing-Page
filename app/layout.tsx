@@ -3,6 +3,9 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { SmoothScrollProvider } from "@/providers/SmoothScrollProvider";
+import { IntroLoader } from "@/components/shared";
+import { CustomCursor } from "@/components/helpers";
+import AnimatedCursor from "react-animated-cursor";
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
@@ -31,10 +34,22 @@ export default function RootLayout({
       <body
         className={cn(
           dmSans.className,
-          "antialiased bg-[#EAEEFE] h-screen overflow-x-hidden"
+          "antialiased bg-[#EAEEFE] h-screen overflow-x-hidden relative"
         )}
       >
-        <SmoothScrollProvider>{children}</SmoothScrollProvider>
+        <SmoothScrollProvider>
+          {/* <IntroLoader /> */}
+          {/* <CustomCursor /> */}
+          {/* <AnimatedCursor
+            innerSize={10}
+            outerSize={12}
+            outerAlpha={0.2}
+            innerScale={0.7}
+            outerScale={5}
+            color="1, 13, 62"
+          /> */}
+          {children}
+        </SmoothScrollProvider>
       </body>
     </html>
   );

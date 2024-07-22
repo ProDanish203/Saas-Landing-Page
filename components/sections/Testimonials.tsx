@@ -69,10 +69,24 @@ export const Testimonials = () => {
           <div className="center">
             <div className="badge-btn">Testimonials</div>
           </div>
-          <h2 className="section-title mt-5">What our users say</h2>
-          <p className="section-description mt-5">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.5, type: "spring" }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="section-title mt-5"
+          >
+            What our users say
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ delay: 0.3, duration: 0.5, type: "spring" }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="section-description mt-5"
+          >
             Hear from our satisfied users about their experiences.
-          </p>
+          </motion.p>
         </div>
         <div className="flex justify-center gap-6 mt-5 [mask-image:linear-gradient(to_bottom,transparent,black,black,transparent)] max-h-[740px] overflow-hidden">
           <TestmionialColumn testimonials={firstCol} duration={20} />

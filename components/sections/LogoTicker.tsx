@@ -1,12 +1,28 @@
 "use client";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 export const LogoTicker = () => {
+  const ref = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+
+  const x1 = useTransform(scrollYProgress, [0, 1], [0, 100]);
+  // const x2 = useTransform(scrollYProgress, [0, 1], [0, -100]);
+
   return (
-    <div className="bg-white md:py-14 py-10">
+    <div ref={ref} className="bg-white md:py-14 py-10">
       <div className="container mx-auto">
-        <div className="center overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)]">
+        <motion.div
+          // style={{
+          //   x: x1,
+          // }}
+          className="center overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)]"
+        >
           <motion.div
             animate={{
               translateX: "-50%",
@@ -106,7 +122,7 @@ export const LogoTicker = () => {
               className="ticker-img"
             />
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

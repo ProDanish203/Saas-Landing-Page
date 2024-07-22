@@ -22,14 +22,26 @@ export const ProductShowcase = () => {
           <div className="center">
             <div className="badge-btn">Boost your productivity</div>
           </div>
-          <h2 className="section-title mt-5">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.5, type: "spring" }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="section-title mt-5"
+          >
             A more effective way to track progress
-          </h2>
-          <p className="section-description mt-5">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ delay: 0.3, duration: 0.5, type: "spring" }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="section-description mt-5"
+          >
             Effortlessly turn your ideas into a fully functional, responsive,
             no-code SaaS website in just minutes with the set of free components
             for Framer.
-          </p>
+          </motion.p>
         </div>
 
         <div className="relative lg:max-w-7xl lg:mx-auto">
