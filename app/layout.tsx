@@ -1,28 +1,94 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { SmoothScrollProvider } from "@/providers/SmoothScrollProvider";
 import { IntroLoader } from "@/components/shared";
 import { CircularButton, CustomCursor } from "@/components/helpers";
-import AnimatedCursor from "react-animated-cursor";
-import NextTopLoader from "nextjs-toploader";
+// import AnimatedCursor from "react-animated-cursor";
+// import NextTopLoader from "nextjs-toploader";
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Saas Landing Page",
+  title: "Innovative SaaS Solution | Your Company Name",
   description:
-    "A simple, clean, animated, and responsive landing page for your SaaS business. Built with Next.js, TypeScript, Tailwind CSS, and Framer Motion. Deployed with Vercel. Developed by Danish Siddiqui. ",
+    "Transform your business with our cutting-edge SaaS platform. Boost productivity, streamline workflows, and drive growth. Start your free trial today!",
   authors: [{ name: "Danish Siddiqui" }],
   keywords: [
+    "SaaS",
+    "software as a service",
+    "cloud software",
+    "business solution",
+    "productivity tool",
     "next.js",
     "typescript",
     "tailwindcss",
     "framer-motion",
-    "saas",
     "landing page",
   ],
+  creator: "Danish Siddiqui",
+  publisher: "Danish Siddiqui",
+  metadataBase: new URL("https://saas-landing-page-lake.vercel.app/"),
+  alternates: {
+    canonical: "/",
+    languages: {
+      "en-US": "/en-US",
+      "es-ES": "/es-ES",
+    },
+  },
+  openGraph: {
+    title: "Innovative SaaS Solution | Danish Siddiqui",
+    description:
+      "Transform your business with our cutting-edge SaaS platform. Boost productivity, streamline workflows, and drive growth.",
+    url: "https://saas-landing-page-lake.vercel.app/",
+    siteName: "Saas Landing Page",
+    images: [
+      {
+        url: "https://saas-landing-page-lake.vercel.app/images/pyramid.png",
+        width: 1200,
+        height: 630,
+        alt: "SaaS Platform | Danish Siddiqui",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Innovative SaaS Solution | Your Company Name",
+    description:
+      "Transform your business with our cutting-edge SaaS platform. Boost productivity, streamline workflows, and drive growth.",
+    creator: "@danish_siddiqui",
+    images: ["https://saas-landing-page-lake.vercel.app/images/pyramid.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  category: "Technology",
+  applicationName: "Saas Landing Page",
+  generator: "Next.js",
+  referrer: "origin-when-cross-origin",
+  formatDetection: {
+    telephone: false,
+    email: false,
+    address: false,
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#010D3E",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 export default function RootLayout({
