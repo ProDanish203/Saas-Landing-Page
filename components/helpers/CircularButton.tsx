@@ -47,7 +47,7 @@ export const CircularButton = () => {
   }, [isClockwise, animationDuration, controls]);
 
   return (
-    <div className="fixed bottom-4 left-4 w-[120px] h-[120px] md:w-[140px] md:h-[140px] z-20">
+    <div className="max-md:hidden fixed bottom-4 left-4 w-[120px] h-[120px] md:w-[140px] md:h-[140px] z-20">
       <motion.div className="absolute w-full h-full" animate={controls}>
         {characters.map((char, i) => (
           <span
